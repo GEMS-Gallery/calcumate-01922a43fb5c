@@ -81,11 +81,12 @@ button:hover {
 }
 
 #equals {
-    background-color: #f44336;
+    background-color: #FFD700;
+    color: #333;
 }
 
 #equals:hover {
-    background-color: #da190b;
+    background-color: #FFC400;
 }
 
 #clear {
@@ -134,11 +135,12 @@ button:hover {
 }
 
 .dark-mode #equals {
-    background-color: #B71C1C;
+    background-color: #FFC107;
+    color: #333;
 }
 
 .dark-mode #equals:hover {
-    background-color: #7F0000;
+    background-color: #FFA000;
 }
 
 .dark-mode #clear {
