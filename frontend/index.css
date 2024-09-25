@@ -65,11 +65,11 @@ button:hover {
 }
 
 .num {
-    background-color: #2196F3;
+    background-color: #4CAF50;
 }
 
 .num:hover {
-    background-color: #1e87db;
+    background-color: #45a049;
 }
 
 .op {
@@ -118,11 +118,11 @@ button:hover {
 }
 
 .dark-mode .num {
-    background-color: #1565C0;
+    background-color: #2E7D32;
 }
 
 .dark-mode .num:hover {
-    background-color: #0D47A1;
+    background-color: #1B5E20;
 }
 
 .dark-mode .op {
