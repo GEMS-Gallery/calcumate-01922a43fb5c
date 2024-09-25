@@ -73,11 +73,11 @@ button:hover {
 }
 
 .op {
-    background-color: #ff9800;
+    background-color: #f44336;
 }
 
 .op:hover {
-    background-color: #e68a00;
+    background-color: #d32f2f;
 }
 
 #equals {
@@ -127,11 +127,11 @@ button:hover {
 }
 
 .dark-mode .op {
-    background-color: #E65100;
+    background-color: #c62828;
 }
 
 .dark-mode .op:hover {
-    background-color: #BF360C;
+    background-color: #b71c1c;
 }
 
 .dark-mode #equals {
