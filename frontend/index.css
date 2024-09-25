@@ -49,12 +49,15 @@ body.dark-mode {
 button {
     width: 60px;
     height: 60px;
-    font-size: 20px;
+    font-size: 24px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     background-color: #4CAF50;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button:hover {

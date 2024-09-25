@@ -10,16 +10,27 @@ let currentValue = '';
 let operator = '';
 let firstOperand = null;
 
+const emojiToNumber = {
+    '0️⃣': '0', '1️⃣': '1', '2️⃣': '2', '3️⃣': '3', '4️⃣': '4',
+    '5️⃣': '5', '6️⃣': '6', '7️⃣': '7', '8️⃣': '8', '9️⃣': '9',
+    '🔟': '10'
+};
+
+const emojiToOperator = {
+    '➕': '+', '➖': '-', '✖️': '*', '➗': '/'
+};
+
 buttons.forEach(button => {
     if (button !== clearButton && button !== equalsButton && button !== darkModeToggle) {
         button.addEventListener('click', () => {
             if (button.classList.contains('num')) {
-                currentValue += button.textContent;
+                const number = emojiToNumber[button.textContent];
+                currentValue += number;
                 display.value = currentValue;
             } else if (button.classList.contains('op')) {
                 if (firstOperand === null) {
                     firstOperand = parseFloat(currentValue);
-                    operator = button.textContent;
+                    operator = emojiToOperator[button.textContent];
                     currentValue = '';
                 }
             }
