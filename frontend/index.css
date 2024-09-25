@@ -1,11 +1,18 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
 }
 
 .calculator {
@@ -13,6 +20,7 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 #display {
@@ -24,6 +32,12 @@ body {
     padding: 5px;
     border: none;
     background-color: #eee;
+    color: #333;
+}
+
+.dark-mode #display {
+    background-color: #444;
+    color: #fff;
 }
 
 .keypad {
@@ -79,4 +93,55 @@ button:hover {
 
 #clear:hover {
     background-color: #7d7d7d;
+}
+
+#darkModeToggle {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+}
+
+#darkModeToggle:hover {
+    background-color: #777;
+}
+
+.dark-mode button {
+    background-color: #555;
+}
+
+.dark-mode button:hover {
+    background-color: #777;
+}
+
+.dark-mode .num {
+    background-color: #1565C0;
+}
+
+.dark-mode .num:hover {
+    background-color: #0D47A1;
+}
+
+.dark-mode .op {
+    background-color: #E65100;
+}
+
+.dark-mode .op:hover {
+    background-color: #BF360C;
+}
+
+.dark-mode #equals {
+    background-color: #B71C1C;
+}
+
+.dark-mode #equals:hover {
+    background-color: #7F0000;
+}
+
+.dark-mode #clear {
+    background-color: #616161;
+}
+
+.dark-mode #clear:hover {
+    background-color: #424242;
 }

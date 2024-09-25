@@ -4,13 +4,14 @@ let display = document.getElementById('display');
 let buttons = document.querySelectorAll('button');
 let clearButton = document.getElementById('clear');
 let equalsButton = document.getElementById('equals');
+let darkModeToggle = document.getElementById('darkModeToggle');
 
 let currentValue = '';
 let operator = '';
 let firstOperand = null;
 
 buttons.forEach(button => {
-    if (button !== clearButton && button !== equalsButton) {
+    if (button !== clearButton && button !== equalsButton && button !== darkModeToggle) {
         button.addEventListener('click', () => {
             if (button.classList.contains('num')) {
                 currentValue += button.textContent;
@@ -60,3 +61,20 @@ equalsButton.addEventListener('click', async () => {
         operator = '';
     }
 });
+
+// Dark mode functionality
+function setDarkMode(isDark) {
+    document.body.classList.toggle('dark-mode', isDark);
+    localStorage.setItem('darkMode', isDark);
+}
+
+darkModeToggle.addEventListener('click', () => {
+    const isDarkMode = document.body.classList.toggle('dark-mode');
+    setDarkMode(isDarkMode);
+});
+
+// Check for saved dark mode preference
+const savedDarkMode = localStorage.getItem('darkMode');
+if (savedDarkMode !== null) {
+    setDarkMode(savedDarkMode === 'true');
+}
